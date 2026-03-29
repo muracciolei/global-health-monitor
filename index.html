@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Health Monitor</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/styles.css">
+<meta name="theme-color" content="#1976d2">
+</head>
+<body>
+<div id="loadingOverlay" class="loading-overlay">
+<div class="spinner"></div>
+<p>Loading health data...</p>
+</div>
+
+<div id="errorMessage" class="error-message" style="display:none">
+<p>⚠️ Unable to load data. Please check your connection.</p>
+</div>
+
+<header class="header">
+<div class="header-top">
+<h1>🌍 Global Health Monitor</h1>
+<span id="lastUpdated" class="last-updated"></span>
+</div>
+<input id="searchInput" type="text" placeholder="Search medical alerts..." autocomplete="off" aria-label="Search articles">
+</header>
+
+<section class="filters">
+<h2>Sources</h2>
+<div id="sourceFilters"></div>
+</section>
+
+<main class="dashboard">
+<section class="panel articles-panel">
+<h2>Latest Alerts</h2>
+<div id="articles" aria-label="Article list"></div>
+</section>
+
+<div class="charts-row">
+<section class="panel">
+<h2>Trending Keywords</h2>
+<canvas id="keywordChart" aria-label="Trending keywords chart"></canvas>
+</section>
+
+<section class="panel">
+<h2>Timeline</h2>
+<canvas id="timelineChart" aria-label="Article timeline chart"></canvas>
+</section>
+</div>
+</main>
+
+<script defer src="js/storage.js"></script>
+<script defer src="js/parser.js"></script>
+<script defer src="js/rss.js"></script>
+<script defer src="js/charts.js"></script>
+<script defer src="js/app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  navigator.serviceWorker.register("service-worker.js").catch(function(){});
+}
+</script>
+
+</body>
+</html>

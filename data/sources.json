@@ -1,0 +1,22 @@
+[
+  {
+    "name": "WHO Global",
+    "url": "https://www.who.int/rss-feeds/news-english.xml"
+  },
+  {
+    "name": "CIDRAP",
+    "url": "https://www.cidrap.umn.edu/rss.xml"
+  },
+  {
+    "name": "CDC Newsroom",
+    "url": "https://tools.cdc.gov/api/v2/resources/media/316422.rss"
+  },
+  {
+    "name": "ScienceDaily Health",
+    "url": "https://www.sciencedaily.com/rss/health_medicine.xml"
+  },
+  {
+    "name": "Google Health Alerts",
+    "url": "https://news.google.com/rss/search?q=health+outbreak&hl=en&gl=US&ceid=EN:en"
+  }
+]
