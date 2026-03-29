@@ -1,4 +1,4 @@
-# Med Pulse PWA — Global Health Monitor
+Global Health Monitor
 
 A Progressive Web App that aggregates global medical news using RSS feeds.
 
